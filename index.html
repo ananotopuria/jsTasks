@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="tasks2.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <!-- <script src="script.js"></script> -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script type="module" src="script.js"></script> -->
+    <!-- <script type="module" src="tasks2.js"></script> -->
+    <script type="module" src="tasks3.js"></script>
+    <script type="module">
+      import { js_style } from "./tasks3.js";
+      import { removecolor } from "./tasks3.js";
+      window.js_style = js_style;
+      window.removecolor = removecolor;
+    </script>
+    <title>js</title>
+  </head>
+  <body>
+    <p id="text">JavaScript Exercises</p>
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+    <form>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="button" onclick="removecolor()" value="Select and Remove" />
+    </form>
+  </body>
 </html>
